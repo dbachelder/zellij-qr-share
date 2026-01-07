@@ -1,0 +1,14 @@
+[package]
+name = "qr-share"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Minimal Zellij plugin for displaying QR codes for web tokens"
+
+[dependencies]
+zellij-tile = "0.43.1"
+qrcode = { version = "0.14.1", default-features = false }
+
+[profile.release]
+opt-level = "s"
+lto = true
